@@ -18,7 +18,7 @@ public class ApartmentCamera : MonoBehaviour
             transform.RotateAround(this.transform.position, Vector3.up, rightSpeed * Time.deltaTime);
         }
 
-        if (left & transform.localEulerAngles.y > max) {
+        if (left & transform.localEulerAngles.y > maxX) {
             transform.RotateAround(this.transform.position, Vector3.up, leftSpeed * Time.deltaTime);
         }
 
