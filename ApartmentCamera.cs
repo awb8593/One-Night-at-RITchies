@@ -6,15 +6,22 @@ public class ApartmentCamera : MonoBehaviour
 {
     public float maxX;
     public float minX;
-    public float moveSpeed;
+    public float rightSpeed;
+    public float leftSpeed;
 
     void Update()
     {
-        if (Input.GetAxis("Mouse X") != 0) {
-            transform.position += new Vector3 (Input.GetAxisRaw("Mouse X") * Time.deltaTime * moveSpeed, 0.0f, 0.0f);
+        bool right = Input.GetKey (KeyCode.RightArrow);
+        bool left = Input.GetKey (KeyCode.LeftArrow);
+        
+        if (right & transform.localEulerAngles.y < maxX) {
+            transform.RotateAround(this.transform.position, Vector3.up, rightSpeed * Time.deltaTime);
         }
 
-        transform.position = new Vector3 (Mathf.Clamp(transform.position.x, minX, maxX), transform.position.y, transform.position.z);
+        if (left & transform.localEulerAngles.y > max) {
+            transform.RotateAround(this.transform.position, Vector3.up, leftSpeed * Time.deltaTime);
+        }
+
         /**
         float rotateHorizontal = Input.GetAxis ("Mouse X");
         if (rotateHorizontal > maxX) {
