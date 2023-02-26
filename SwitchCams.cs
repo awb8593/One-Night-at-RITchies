@@ -30,11 +30,13 @@ public class SwitchCams : MonoBehaviour
     public void switchGracies() 
     {
         currentCam.material = gracies;
+        Debug.Log("Gracies!");
     }
 
     public void switchNature()
     {
         currentCam.material = nature;
+        Debug.Log("Nature!");
     }
 
     public void switchGordon() 
