@@ -9,29 +9,76 @@ public class SwitchCams : MonoBehaviour
     public RawImage currentCam;
     private RawImage img;
 
-    public Material cam1;
-    public Material cam2;
+    public Material gracies;
+    public Material nature;
+    public Material gordon;
+    public Material gpc;
+    public Material shed;
+    public Material sau;
+    public Material tigerStatue;
+    public Material kgcoe;
+    public Material globalVillage;
+    public Material golisano;
+    public Material hallway;
 
-    // Start is called before the first frame update
     void Start()
     {
         img = (RawImage)currentCam.GetComponent<RawImage>();
-        currentCam.material = cam1;
+        currentCam.material = gracies;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void switchGracies() 
     {
-        
+        currentCam.material = gracies;
     }
 
-    public void switchCam1() 
+    public void switchNature()
     {
-        currentCam.material = cam1;
+        currentCam.material = nature;
     }
 
-    public void switchCam2()
+    public void switchGordon() 
     {
-        currentCam.material = cam2;
+        currentCam.material = gordon;
+    }
+
+    public void switchGPC() 
+    {
+        currentCam.material = gpc;
+    }
+
+    public void switchSHED() 
+    {
+        currentCam.material = shed;
+    }
+
+    public void switchSAU() 
+    {
+        currentCam.material = sau;
+    }
+
+    public void switchTigerStatue() 
+    {
+        currentCam.material = tigerStatue;
+    }
+
+    public void switchKGCOE() 
+    {
+        currentCam.material = kgcoe;
+    }
+
+    public void switchGlobalVillage() 
+    {
+        currentCam.material = globalVillage;
+    }
+
+    public void switchGolisano() 
+    {
+        currentCam.material = golisano;
+    }
+
+    public void switchHallway() 
+    {
+        currentCam.material = hallway;
     }
 }
